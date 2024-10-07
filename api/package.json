@@ -1,20 +1,28 @@
 {
-  "dependencies": {
-    "express": "^4.21.0",
-    "pg": "^8.13.0"
-  },
   "name": "api",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
-    "nodemon": "^3.1.7"
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.4",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "start": "ts-node ./src/index.ts",
+    "dev": "nodemon --files ./src/index.ts",
+    "build": "tsc -p ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@apollo/server": "^4.11.0",
+    "apollo-server-express": "^3.13.0",
+    "express": "^4.21.0",
+    "graphql": "^16.9.0"
+  }
 }
